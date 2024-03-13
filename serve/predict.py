@@ -75,7 +75,7 @@ def predict_fn(input_data, model):
     #data_X = np.array([rev_seq])  
     #data_len = np.array([rev_len])   
     
-    data_X, data_len = convert_and_pad(word_dict, review_to_words(test_review))
+    data_X, data_len = convert_and_pad(model.word_dict, review_to_words(input_data))
   
 
     # Using data_X and data_len we construct an appropriate input tensor. Remember
